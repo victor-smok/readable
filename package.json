@@ -1,0 +1,73 @@
+{
+  "private": true,
+  "version": "0.1.0",
+  "name": "udacity-readable",
+  "description": "Aplicativo de postagens e comentários - Trabalho de conclusão do curso de redux da Udacity",
+  "author": "Victor Silva",
+  "main": "/src/index.js",
+  "engines": {
+    "node": "8.x",
+    "npm": "5.x"
+  },
+  "scripts": {
+    "start": "npm run server-and-react",
+    "server": "node -r @std/esm -r dotenv/config server",
+    "react": "cd presentation && react-scripts start",
+    "build": "cd presentation && react-scripts build",
+    "test": "cd presentation && react-scripts test --env=jsdom",
+    "server-and-react": "concurrently -n \"server,react\" -c \"green,blue\" \"npm run server\" \"npm run react\"",
+    "heroku-postbuild": "npm run build",
+    "lint": "prettier-eslint --write --no-semi --single-quote --no-bracket-spacing '{src,server,.storybook}/**/*.{js,json,css,scss}'"
+  },
+  "@std/esm": {
+    "esm": "js",
+    "cjs": true
+  },
+  "dependencies": {
+    "@std/esm": "0.7.1",
+    "axios": "0.16.2",
+    "babel-eslint": "7.2.3",
+    "body-parser": "1.17.2",
+    "clone": "2.1.1",
+    "concurrently": "3.5.0",
+    "cors": "2.8.4",
+    "date-fns": "1.28.5",
+    "dotenv": "4.0.0",
+    "ecstatic": "3.0.0",
+    "eslint": "4.6.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-config-standard-jsx": "4.0.2",
+    "eslint-plugin-node": "5.1.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-react": "7.3.0",
+    "eslint-plugin-standard": "3.0.1",
+    "express": "4.15.4",
+    "formik": "0.8.9",
+    "glamor": "2.20.40",
+    "marked": "0.3.6",
+    "prettier": "1.6.1",
+    "prettier-eslint-cli": "4.3.0",
+    "prop-types": "15.5.10",
+    "react": "16.0.0-beta.5",
+    "react-dom": "16.0.0-beta.5",
+    "react-redux": "5.0.6",
+    "react-router-dom": "4.2.2",
+    "react-scripts": "1.0.12",
+    "recompose": "0.25.0",
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0",
+    "semantic-ui-css": "2.2.12",
+    "semantic-ui-react": "0.72.0",
+    "uuid": "3.1.0",
+    "yup": "0.22.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danhayden/udacity-react-nanodegree-readable.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danhayden/udacity-react-nanodegree-readable/issues"
+  },
+  "homepage": "https://react-nanodegree-readable.herokuapp.com"
+}
