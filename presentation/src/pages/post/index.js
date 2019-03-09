@@ -51,7 +51,7 @@ class Post extends Component {
             </Message>
           ) : (
             <Grid centered>
-              <Grid.Column width={12}>
+              <Grid.Column width={11}>
                 <Segment>
                   <Header as='h2'>{post.title}</Header>
                   {post.body && (
@@ -62,7 +62,7 @@ class Post extends Component {
                 </Segment>
                 <PostComments />
               </Grid.Column>
-              <Grid.Column width={4}>
+              <Grid.Column width={5}>
                 <PostAside />
               </Grid.Column>
             </Grid>

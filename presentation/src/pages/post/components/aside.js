@@ -21,7 +21,7 @@ class PostAside extends Component {
   render () {
     const {post} = this.props
     return (
-      <Segment.Group>
+        <Segment.Group>
         <Segment>
           <Icon name='user' />
           {post.author}
@@ -31,6 +31,8 @@ class PostAside extends Component {
           {post.category}
         </Segment>
         <Segment>
+          <Icon disabled name='edit outline' />
+          {"Comments: " + localStorage[post.id] + " "}
           <Icon disabled name='thumbs outline up' />
           {post.voteScore}
 
